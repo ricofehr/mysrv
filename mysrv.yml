@@ -29,6 +29,7 @@
     - role: dockerpull
       tags: ['docker']
     - role: FGtatsuro.virtualbox
+      virtualbox_distributions_with_newpublickey: ['artful']
       tags: ['vagrant', 'virtualization']
     - role: libvirtd
       become: yes
@@ -37,6 +38,9 @@
       tags: ['vagrant', 'virtualization']
     - role: vagrantup
       tags: ['vagrant']
+    - role: openvpn
+      tags: ['vpn']
+      become: yes
 
   pre_tasks:
     - name: Ensure gitmodules update

@@ -3,5 +3,5 @@
 ssh_server_ports:
   - 22
   - 8846
-ssh_allow_root_with_key: true
-ssh_server_password_login: true
+ssh_allow_root_with_key: false
+ssh_server_password_login: false

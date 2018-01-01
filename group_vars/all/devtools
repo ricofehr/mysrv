@@ -9,3 +9,4 @@ devtools_packages:
   - golang-go
   - software-properties-common
   - python3-pip
+  - unzip
