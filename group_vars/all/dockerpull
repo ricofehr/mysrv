@@ -1,0 +1,32 @@
+---
+
+dockerpull_list:
+  - nextdeploy/webphp
+  - nextdeploy/symfony
+  - ricofehr/ror
+  - composer/composer
+  - ruby
+  - node
+  - php
+  - python
+  - golang
+
+dockerpull_aliases:
+  - "alias composer='docker run -v $(pwd):/app composer/composer'"
+  - "alias ruby='docker run --rm -v $(pwd):/usr/src/app -w /usr/src/app ruby ruby'"
+  - "alias gem='docker run --rm -v $(pwd):/usr/src/app -w /usr/src/app ruby gem'"
+  - "alias bundle='docker --rm -v $(pwd):/usr/src/app -w /usr/src/app ruby bundle'"
+  - "alias node='docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app node:6 node'"
+  - "alias php='docker run -it --rm -v $(pwd):/usr/src/myapp -w /usr/src/myapp php php'"
+  - "alias go='docker run -it --rm -v $(pwd):/usr/src/myapp -w /usr/src/myapp golang go'"
+  - "alias python='docker run -it --rm -v $(pwd):/usr/src/myapp -w /usr/src/myapp python python'"
+  - "alias webserver='docker run -v=$(pwd):/var/www/html -p 80:80 nextdeploy/webphp'"
+  - "alias ror='docker run --volume=$(pwd):/app ricofehr/ror'"
+  - "alias ror-migration='docker run --volume=$(pwd):/app ricofehr/ror -k generate migration'"
+  - "alias ror-scaffold='docker run --volume=$(pwd):/app ricofehr/ror -k generate scaffold'"
+  - "alias ror-mailer='docker run --volume=$(pwd):/app ricofehr/ror generate mailer'"
+  - "alias npm='docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app node:6 npm'"
+  - "alias npm-local='docker run -it --rm -v $(pwd):/usr/src/app -v $(pwd)/remote_modules:/usr/local/lib/node_modules -w /usr/src/app node:6 npm'"
+  - "alias bower-local='docker run -it --rm -v $(pwd):/usr/src/app -v $(pwd)/remote_modules:/usr/local/lib/node_modules -w /usr/src/app node:6 /usr/local/lib/node_modules/bower/bin/./bower --allow-root'"
+  - "alias ember='docker run -it --rm -e PATH=/usr/bin:/usr/local/bin:/bin:/sbin:/usr/local/lib/node_modules/ember-cli/bin:/usr/local/lib/node_modules/npm/bin -v $(pwd):/usr/src/app -v $(pwd)/remote_modules:/usr/local/lib/node_modules -w /usr/src/app node:6 ember'"
+  - "alias ember-s='docker run -it --rm -e PATH=/usr/bin:/usr/local/bin:/bin:/sbin:/usr/local/lib/node_modules/ember-cli/bin:/usr/local/lib/node_modules/npm/bin -v $(pwd):/usr/src/app -v $(pwd)/remote_modules:/usr/local/lib/node_modules -w /usr/src/app -p 4200:4200 -p 35722:35722 node:6 ember s'"

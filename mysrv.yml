@@ -1,0 +1,53 @@
+---
+
+- hosts: all
+  gather_facts: yes
+
+  roles:
+    - role: oh-my-zsh
+      tags: ['install']
+    - role: base
+      tags: ['install']
+    - role: vim
+      tags: ['devtool']
+    - role: devtools
+      tags: ['devtool']
+    - role: git
+      become: yes
+      tags: ['devtool', 'git']
+    - role: gitconfig
+      tags: ['devtool', 'git']
+    - role: repos
+      tags: ['devtool', 'git']
+    - role: ansible
+      tags: ['devtool', 'vagrant']
+    - role: FGtatsuro.python-requirements
+      tags: ['install']
+    - role: docker
+      become: yes
+      tags: ['docker', 'virtualization']
+    - role: dockerpull
+      tags: ['docker']
+    - role: FGtatsuro.virtualbox
+      tags: ['vagrant', 'virtualization']
+    - role: libvirtd
+      become: yes
+      tags: ['vagrant', 'virtualization']
+    - role: vagrant
+      tags: ['vagrant', 'virtualization']
+    - role: vagrantup
+      tags: ['vagrant']
+
+  pre_tasks:
+    - name: Ensure gitmodules update
+      local_action: command git submodule update --init --recursive
+
+    - name: Stop package managers
+      shell: >
+        while fuser /var/lib/apt/lists/lock; do sleep 1; done;
+        while fuser /var/cache/apt/archives/lock; do sleep 1; done;
+        while fuser /var/lib/dpkg/lock; do sleep 1; done;
+        sleep 2;
+      become: true
+      args:
+        executable: /bin/bash

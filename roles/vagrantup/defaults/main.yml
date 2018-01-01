@@ -1,0 +1,5 @@
+---
+
+vagrantup_enable: false
+vagrantup_provider: 'virtualbox'
+vagrantup_list: []

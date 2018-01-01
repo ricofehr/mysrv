@@ -1,0 +1,5 @@
+---
+
+virtualbox_apt_package: virtualbox-5.2
+virtualbox_distributions_with_newpublickey:
+  - artful

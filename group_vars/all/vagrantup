@@ -1,0 +1,5 @@
+---
+
+vagrantup_enable: false
+vagrantup_list:
+    - "{{ repos_folder }}/k8s-bigdata-poc"

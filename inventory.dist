@@ -1,0 +1,2 @@
+[all]
+ricosrv ansible_ssh_host=XXX.XXX.XXX.XXX ansible_user=XXXX ansible_python_interpreter=/usr/bin/python3.6 vagrantup_enable=false

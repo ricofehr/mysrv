@@ -1,0 +1,7 @@
+---
+
+- name: install ansible
+  pip:
+    name: ansible
+  notify: disable hostkey for ansible
+  become: yes

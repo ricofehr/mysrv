@@ -1,0 +1,16 @@
+---
+
+- name: Install vagrant plugins
+  shell: >
+    vagrant plugin install vagrant-libvirt;
+    vagrant plugin install vagrant-hostmanager;
+
+- name: Launch vms
+  shell: vagrant up --provider "{{ vagrantup_provider }}" --provision >> /tmp/vagrant.log 2>&1
+  args:
+    chdir: "{{ item }}"
+    executable: /bin/bash
+  async: 7200
+  poll: 30
+  with_items: "{{ vagrantup_list }}"
+  when: vagrantup_enable

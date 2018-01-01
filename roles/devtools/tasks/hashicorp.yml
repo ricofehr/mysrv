@@ -1,0 +1,30 @@
+---
+
+- name: check if newer install
+  stat:
+    path: ~/.ansible_devtools
+  register: new_install
+
+- name: Download terraform
+  get_url:
+    url: https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_freebsd_amd64.zip
+    dest: /tmp/terraform.zip
+  when: not new_install.stat.exists
+
+- name: Download packer
+  get_url:
+    url: https://releases.hashicorp.com/packer/1.1.2/packer_1.1.2_linux_amd64.zip
+    dest: /tmp/packer.zip
+  when: not new_install.stat.exists
+
+- name: Install packer & terraform
+  shell: >
+    cd /tmp;
+    unzip packer.zip;
+    unzip terraform.zip;
+    mv packer /usr/bin/;
+    mv terraform /usr/bin/;
+    chmod +x /usr/bin/packer;
+    chmod +x /usr/bin/terraform;
+  become: yes
+  when: not new_install.stat.exists

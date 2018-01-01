@@ -1,0 +1,39 @@
+[submodule "roles/ssh-hardening"]
+	path = roles/ssh-hardening
+	url = https://github.com/dev-sec/ansible-ssh-hardening
+[submodule "roles/base"]
+	path = roles/base
+	url = https://github.com/ricofehr/ansible-role-base
+[submodule "roles/vim"]
+	path = roles/vim
+	url = https://github.com/ricofehr/ansible-role-vim
+[submodule "roles/dockerpull"]
+	path = roles/dockerpull
+	url = https://github.com/ricofehr/ansible-role-dockerpull
+[submodule "roles/libvirtd"]
+	path = roles/libvirtd
+	url = https://github.com/debops/ansible-libvirtd
+[submodule "roles/repos"]
+	path = roles/repos
+	url = https://github.com/ricofehr/ansible-role-repos
+[submodule "roles/gitconfig"]
+	path = roles/gitconfig
+	url = https://github.com/ricofehr/ansible-role-gitconfig
+[submodule "roles/FGtatsuro.virtualbox"]
+	path = roles/FGtatsuro.virtualbox
+	url = https://github.com/FGtatsuro/ansible-virtualbox
+[submodule "roles/FGtatsuro.python-requirements"]
+	path = roles/FGtatsuro.python-requirements
+	url = https://github.com/FGtatsuro/ansible-python-requirements
+[submodule "roles/vagrant"]
+	path = roles/vagrant
+	url = https://github.com/FGtatsuro/ansible-vagrant
+[submodule "roles/oh-my-zsh"]
+	path = roles/oh-my-zsh
+	url = https://github.com/gantsign/ansible-role-oh-my-zsh
+[submodule "roles/docker"]
+	path = roles/docker
+	url = https://github.com/geerlingguy/ansible-role-docker
+[submodule "roles/git"]
+	path = roles/git
+	url = https://github.com/geerlingguy/ansible-role-git
