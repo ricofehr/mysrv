@@ -32,7 +32,7 @@
     - role: dockerpull
       tags: ['docker']
     - role: FGtatsuro.virtualbox
-      virtualbox_distributions_with_newpublickey: ['artful']
+      virtualbox_distributions_with_newpublickey: ['artful', 'xenial', 'jessie', 'yakkety', 'stretch']
       tags: ['vagrant', 'virtualization']
     - role: libvirtd
       become: yes
