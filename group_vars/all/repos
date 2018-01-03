@@ -1,19 +1,6 @@
 ---
 
 repos_list:
-    - git@github.com:ricofehr/ceph-poc
-    - git@github.com:ricofehr/dockerfiles
-    - git@github.com:ricofehr/k8s-bigdata-poc
-    - git@github.com:ricofehr/kafka-poc
-    - git@github.com:ricofehr/mysrv
-    - git@github.com:ricofehr/nextdeploy
-    - git@github.com:ricofehr/nextdeploy-cli
-    - git@github.com:ricofehr/nextdeploy-puppet
-    - git@github.com:ricofehr/nextdeploy-webui
-    - git@github.com:ricofehr/nextdeploy-blink1
-    - git@github.com:ricofehr/nextdeploy-dockerfiles
-    - git@github.com:ricofehr/nextdeploy-sop
-    - git@github.com:ricofehr/nginx-poc
-    - git@github.com:ricofehr/nodejs-poc
-    - git@github.com:ricofehr/os-ansible-poc
-    - git@github.com:ricofehr/tf-poc
+    - https://github.com/ricofehr/ceph-poc
+    - https://github.com/ricofehr/dockerfiles
+    - https://github.com/ricofehr/k8s-bigdata-poc
