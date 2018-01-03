@@ -4,6 +4,9 @@
   gather_facts: yes
 
   roles:
+    - role: ssh-hardening
+      become: yes
+      tags: ['install', 'ssh']
     - role: oh-my-zsh
       tags: ['install']
     - role: base
