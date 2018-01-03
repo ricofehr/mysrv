@@ -3,5 +3,6 @@
 - name: install ansible
   pip:
     name: ansible
+    executable: pip3
   notify: disable hostkey for ansible
   become: yes
